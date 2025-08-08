@@ -1,0 +1,172 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Crop Report
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-white">
+  <!-- PAGE 1 -->
+  <div class="max-w-7xl mx-auto p-6 bg-[#dbe8f2] rounded-3xl relative min-h-[600px]">
+   <img alt="SiRDA_Logo" class="absolute top-6 left-6 rounded-lg w-[300px] h-[60px] object-cover" height="70" src="/assest/sidralogo.png" width="300"/>
+   <img alt="KSRCT_Logo" class="absolute top-6 right-6 rounded-lg w-[60px] h-[60px] object-cover" height="60" src="/assest/ksrctlogo.png " width="60"/>
+   <h1 class="text-[72px] font-sans font-normal text-[#1f2937] text-center mt-20">
+    Crop Report
+   </h1>
+   <div class="max-w-[600px] mx-auto mt-8 rounded-3xl overflow-hidden">
+    <img alt="Farmland image" class="w-full h-auto object-cover rounded-3xl" height="300" src=" field images " width="600"/>
+   </div>
+   <div class="flex justify-center items-center mt-4 text-black font-extrabold text-lg">
+    <i class="fas fa-map-marker-alt mr-2">
+    </i>
+    Field Information
+   </div>
+   <div class="max-w-4xl mx-auto mt-6 grid grid-cols-2 gap-x-20 gap-y-3 text-[18px] font-sans">
+    <div class="space-y-3">
+     <div class="text-gray-600 font-semibold flex justify-between">
+      <span>
+       Field Name:
+      </span>
+      <span class="font-extrabold">
+       Field
+      </span>
+     </div>
+     <div class="text-gray-600 font-semibold flex justify-between">
+      <span>
+       Crop Name:
+      </span>
+      <span class="font-extrabold">
+       crop
+      </span>
+     </div>
+     <div class="text-gray-600 font-semibold flex justify-between">
+      <span>
+       Sowing Date:
+      </span>
+      <span class="font-extrabold">
+       Sowing/planting
+      </span>
+     </div>
+    </div>
+    <div class="space-y-3">
+     <div class="text-gray-600 font-semibold flex justify-between">
+      <span>
+       Report Date:
+      </span>
+      <span class="font-extrabold">
+       Current date
+      </span>
+     </div>
+     <div class="text-gray-600 font-semibold flex justify-between">
+      <span>
+       Area Coverage (in Acre):
+      </span>
+      <span class="font-extrabold">
+       Area
+      </span>
+     </div>
+     <div class="text-gray-600 font-semibold flex justify-between">
+      <span>
+       Growth Stage:
+      </span>
+      <span class="font-extrabold">
+       Maturity
+      </span>
+     </div>
+    </div>
+   </div>
+  </div>
+  
+  <!-- PAGE 2 -->
+  <div class="max-w-7xl mx-auto p-6 bg-[#f0f5fa] rounded-3xl relative min-h-[600px] mt-12">
+   <div class="flex items-center justify-between mb-4">
+    <div class="text-black font-bold text-[15px] leading-5 max-w-[150px]">
+     OLD NDVI<br/>IMAGE DATE
+    </div>
+    <h1 class="text-black font-bold text-2xl leading-6 tracking-tight">
+     GREEN HEALTH SCORE (NDVI)
+    </h1>
+    <div class="flex items-center gap-4">
+     <div class="text-black font-bold text-[15px] leading-5 max-w-[150px] text-right">
+      CURRENT<br/>IMAGE DATE
+     </div>
+     <img alt="Landscape view" class="w-[180px] h-[40px] rounded-lg" height="40" src="/assest/farmland.png" width="180"/>
+    </div>
+   </div>
+   
+   <!-- Horizontal Line -->
+   <div class="border-t border-gray-300 my-2"></div>
+   
+   <div class="flex justify-between items-center max-w-6xl mx-auto mt-8">
+    <!-- Main Content with boxes -->
+    <div class="flex items-center justify-between w-full">
+      <!-- Left Box -->
+      <div class="flex flex-col items-center border-r border-gray-300 pr-4 w-1/3">
+        <div class="bg-[#edf3f8] text-gray-700 font-bold text-[14px] rounded-md px-4 py-2 mb-3 inline-block">
+          OLD NDMI VALUE
+        </div>
+        <img alt="Field visualization" class="w-[220px] h-[220px] object-cover" height="220" src="/assest/farmland.png" width="220"/>
+      </div>
+      
+      <!-- Middle Arrow -->
+      <div class="flex items-center justify-center px-4">
+        <div class="text-green-600 font-bold flex">
+          <!-- Green chevron arrows pointing right -->
+          <div class="flex flex-col">
+            <span class="text-[#2e8c42] text-3xl">›››</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Box -->
+      <div class="flex flex-col items-center border-r border-gray-300 pr-4 w-1/3">
+        <div class="bg-[#edf3f8] text-gray-700 font-bold text-[14px] rounded-md px-4 py-2 mb-3 inline-block">
+          NDMI VALUE
+        </div>
+        <img alt="Field visualization" class="w-[220px] h-[220px] object-cover" height="220" src="/assest/farmland.png" width="220"/>
+      </div>
+      
+      <!-- Far Right Image -->
+      <div class="flex flex-col items-center ml-4 w-1/4">
+        <img alt="Field visualization tall" class="w-[160px] h-[280px] object-cover" height="280" src="/assest/farmland.png" width="160"/>
+      </div>
+    </div>
+   </div>
+   
+   <!-- Horizontal Line -->
+   <div class="border-t border-gray-300 my-6"></div>
+   
+   <!-- Footer Info -->
+   <div class="max-w-5xl mx-auto mt-4 text-[16px] font-sans">
+    <div class="text-gray-700">
+      <p class="font-semibold">
+       Green Health Score (NDVI)
+      </p>
+      <p class="mt-2">
+       Value:
+       <span class="font-bold">
+        OLD NDVI VALUE
+       </span>
+       <span>
+        (Change:
+       </span>
+       <span class="font-bold">
+        NDVI change
+       </span>
+       <span>
+        )
+       </span>
+      </p>
+      <p class="mt-2 font-bold">
+       NDVI ADVISORY
+      </p>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
+

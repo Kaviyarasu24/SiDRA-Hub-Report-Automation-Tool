@@ -1,0 +1,90 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Green Health Score (NDVI)
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-[#e8f0f7] p-10">
+  <div class="max-w-7xl mx-auto bg-white rounded-3xl p-6 shadow-lg" style="min-height: 24rem;">
+   <header class="flex items-center justify-between mb-4">
+    <div class="text-black font-extrabold text-[15px] leading-5 max-w-[120px]">
+     OLD NDVI
+     <br/>
+     IMAGE DATE
+    </div>
+    <h1 class="text-black font-extrabold text-xl leading-6 tracking-tight">
+     GREEN HEALTH SCORE (NDVI)
+    </h1>
+    <div class="flex items-center space-x-4">
+     <div class="text-black font-extrabold text-[15px] leading-5 max-w-[120px] text-right">
+      CURRENT
+      <br/>
+      IMAGE DATE
+     </div>
+     <img alt="Landscape view" class="w-[180px] h-[40px] rounded-lg" height="40" src="../assest/farmland.png" width="180"/>
+    </div>
+   </header>
+   
+   <div class="border-t border-gray-200 my-2"></div>
+   
+   <main class="flex mt-6">
+    <section class="flex flex-col items-center justify-start p-4 w-[280px] border-r border-gray-200">
+     <div class="bg-[#e8f0f7] text-black font-bold text-[13px] leading-5 rounded-md px-3 py-1 mb-4">
+      OLD NDVI  VALUE
+     </div>
+     <img alt="Old NDVI image from excel in attribute of NDVI image data" class="w-[220px] h-[220px] object-cover" height="220" src="   " width="220"/>
+    </section>
+    
+    <div class="flex flex-col items-center justify-center px-4 w-[80px] border-r border-gray-200">
+     <div class="text-green-600 font-bold text-3xl flex flex-col">
+      <i class="fas fa-chevron-right"></i>
+      <i class="fas fa-chevron-right"></i>
+      <i class="fas fa-chevron-right"></i>
+     </div>
+    </div>
+    
+    <section class="flex flex-col items-center justify-start p-4 w-[280px] border-r border-gray-200">
+     <div class="bg-[#e8f0f7] text-black font-bold text-[13px] leading-5 rounded-md px-3 py-1 mb-4">
+      NDVI VALUE
+     </div>
+     <img alt="new ndvi image from excel attribute of old ndvi image date" class="w-[220px] h-[220px] object-cover" height="220" src="    " width="220"/>
+    </section>
+    
+    <section class="flex flex-col items-center justify-start p-4 w-[280px]">
+     <img alt="Field visualization tall" class="w-[220px] h-[250px] object-cover rounded-md" height="250" src="../assest/demo.jpg" width="220"/>
+    </section>
+   </main>
+   
+   <div class="border-t border-gray-200 mt-6 mb-4"></div>
+   
+   <footer class="text-black text-[14px] font-semibold leading-5 max-w-5xl">
+    <p>
+     Green Health Score (NDVI)
+    </p>
+    <p class="mt-2">
+     Value:
+     <span class="font-extrabold">
+      OLD NDVI VALUE
+     </span>
+     <span>
+      (Change:
+     </span>
+     <span class="font-extrabold">
+      NDVI change
+     </span>
+     <span>
+      )
+     </span>
+    </p>
+    <p class="mt-2 font-extrabold">
+     NDVI ADVISORY
+    </p>
+   </footer>
+  </div>
+ </body>
+</html>
