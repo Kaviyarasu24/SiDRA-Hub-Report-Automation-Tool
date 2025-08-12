@@ -335,7 +335,7 @@ def generate_reports_for_all_rows(excel_path, template_path, output_dir="reports
 
 if __name__ == "__main__":
     # Paths
-    excel_path = "test.xlsx"  # Using the test Excel file
+    excel_path = "demo.xlsx"  # Using the test Excel file
     template_path = "templete/page1.html"
     
     # Generate individual reports for each row
