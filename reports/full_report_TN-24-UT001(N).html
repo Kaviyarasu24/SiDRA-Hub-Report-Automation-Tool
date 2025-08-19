@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>SiDRA Hub Crop Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        @media print {
+            .page-break {
+                page-break-after: always;
+            }
+        }
+        .page {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- PDF Download Button -->
+    <div class="fixed top-4 right-4 z-50">
+        <button id="downloadPdf" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg flex items-center gap-2 transition-colors">
+            <i class="fas fa-download"></i>
+            Download PDF
+        </button>
+    </div>
+    
+    <div id="reportContent">
+
+        <div class="page" id="page1">
+            <!-- PDF Download Button -->
+  
+  
+  <div id="reportContent" class="max-w-7xl mx-auto p-6 bg-[#dbe8f2] rounded-3xl relative" style="min-height: 800px; height: auto;">
+   <img alt="SiRDA_Logo" class="absolute top-6 left-6 w-[300px] h-[60px] object-contain" height="70" src="../assest/sidralogo.png" width="300"/>
+   <img alt="KSRCT_Logo" class="absolute top-6 right-6 w-[60px] h-[60px] object-contain" height="60" src="../assest/ksrctlogo.png " width="60"/>
+   <h1 class="text-[72px] font-sans font-normal text-[#1f2937] text-center mt-20 mb-8">
+    Crop Report
+   </h1>
+   <div class="max-w-[600px] mx-auto mt-8 mb-6 rounded-3xl overflow-hidden">
+    <img alt="Farmland image" class="w-full h-auto object-cover rounded-3xl" height="300" src="../assest/farmland.png" width="600"/>
+   </div>
+   <div class="flex justify-center items-center mt-4 mb-6 text-black font-extrabold text-lg">
+    <i class="fas fa-map-marker-alt mr-2">
+    </i>
+    TN-24-UT001(N) Information
+   </div>
+   <div class="max-w-4xl mx-auto mt-6 grid grid-cols-2 gap-x-20 gap-y-3 text-[18px] font-sans">
+    <div class="space-y-3">
+     <div class="text-gray-600 font-semibold">
+      <span>Field Name: </span>
+      <span class="font-extrabold">TN-24-UT001(N)</span>
+     </div>
+     <div class="text-gray-600 font-semibold">
+      <span>Crop Name: </span>
+      <span class="font-extrabold">-</span>
+     </div>
+     <div class="text-gray-600 font-semibold">
+      <span>Sowing Date: </span>
+      <span class="font-extrabold">-</span>
+     </div>
+    </div>
+    <div class="space-y-3">
+     <div class="text-gray-600 font-semibold">
+      <span>Report Date: </span>
+      <span class="font-extrabold">2025-08-19</span>
+     </div>
+     <div class="text-gray-600 font-semibold">
+      <span>Area Coverage: </span>
+      <span class="font-extrabold">0.65 ha</span>
+     </div>
+     <div class="text-gray-600 font-semibold">
+      <span>Growth Stage: </span>
+      <span class="font-extrabold">Not specified</span>
+     </div>
+    </div>
+   </div>
+  </div>
+   
+  </div>
+  <!-- Extra padding to ensure all content is captured in PDF -->
+  <div class="pb-10"></div>
+
+  
+        </div>
+        <div class="page-break"></div>
+
+        <div class="page" id="page2">
+            <!-- PAGE 2 -->
+    <div class="max-w-7xl mx-auto p-6 bg-[#dbe8f2] rounded-3xl relative min-h-[600px] mt-12">
+      <div class="flex items-center justify-between mb-4">
+        <div class="text-black font-bold text-[15px] leading-5 max-w-[150px]">
+          OLD IMAGE DATE:<br/>11/07/2025
+        </div>
+        <h1 class="text-black font-bold text-2xl leading-6 tracking-tight">
+          GREEN HEALTH SCORE (NDVI)
+        </h1>
+        <div class="flex items-center gap-4">
+          <div class="text-black font-bold text-[15px] leading-5 max-w-[150px] text-right">
+            NEW IMAGE DATE<br/>11/07/2025
+          </div>
+          <img alt="Landscape view" class="w-[180px] h-[40px] rounded-lg" height="40" src="../assest/sidralogo.png" width="180"/>
+        </div>
+      </div>
+      
+      <!-- Horizontal Line -->
+      <div class="border-t border-gray-300 my-2"></div>
+      
+      <div class="flex justify-between items-center max-w-6xl mx-auto mt-8">
+        <!-- Main Content with boxes -->
+        <div class="flex items-center justify-between w-full">
+          <!-- Left Box -->
+          <div class="flex flex-col items-center border-r border-gray-300 pr-4 w-1/3">
+            <div class="bg-[#edf3f8] text-gray-700 font-bold text-[14px] rounded-md px-4 py-2 mb-3 inline-block">
+              0.6567
+            </div>
+            <img alt="Old NDVI" class="w-[220px] h-[220px] object-cover" height="220" src="../images/TN-24-UT001(N)\old_ndvi.png" width="220"/>
+          </div>
+          
+          <!-- Middle Arrow -->
+          <div class="flex items-center justify-center px-4">
+            <div class="text-green-600 font-bold flex">
+              <!-- Green chevron arrows pointing right -->
+              <div class="flex flex-col">
+                <span class="text-[#2e8c42] text-3xl">›››</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right Box -->
+          <div class="flex flex-col items-center border-r border-gray-300 pr-4 w-1/3">
+            <div class="bg-[#edf3f8] text-gray-700 font-bold text-[14px] rounded-md px-4 py-2 mb-3 inline-block">
+              0.33
+            </div>
+            <img alt="Current NDVI" class="w-[220px] h-[220px] object-cover" height="220" src="../images/TN-24-UT001(N)\current_ndvi.png" width="220"/>
+          </div>
+          
+          <!-- Far Right Image -->
+          <div class="flex flex-col items-center ml-4 w-1/4">
+            <img alt="Field visualization tall" class="w-[160px] h-[280px] object-cover" height="280" src="../assest/farmland.png" width="160"/>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Horizontal Line -->
+      <div class="border-t border-gray-300 my-6"></div>
+      
+      <!-- Footer Info -->
+      <div class="max-w-5xl mx-auto mt-4 text-[16px] font-sans">
+        <div class="text-gray-700">
+          <p class="font-semibold">
+            Green Health Score (NDVI)
+          </p>
+          <p class="mt-2 font-bold">
+            2025-07-11 தேதியின்படி, உங்கள் நிலத்தின் தாவர ஆரோக்கியம் குறைவாக உள்ளது (NDVI: 0.33). பயிர் அல்லது சாகுபடி தேதி குறிப்பிடப்படாததால், இது தரிசு நிலமாக இருக்கலாம். NDVI மதிப்பு குறைந்துள்ளதால், உடனடியாக நிலத்தை ஆய்வு செய்து, மண் பரிசோதனை செய்யவும்.
+          </p>
+        </div>
+      </div>
+    </div>
+        </div>
+        <div class="page-break"></div>
+
+        <div class="page" id="page3">
+            <!-- PAGE 2 -->
+    <div class="max-w-7xl mx-auto p-6 bg-[#dbe8f2] rounded-3xl relative min-h-[600px] mt-12">
+      <div class="flex items-center justify-between mb-4">
+        <div class="text-black font-bold text-[15px] leading-5 max-w-[150px]">
+          OLD IMAGE DATE:<br/>11/07/2025
+        </div>
+        <h1 class="text-black font-bold text-2xl leading-6 tracking-tight">
+          MOISTURE LEVEL INDICATOR (NDMI)
+        </h1>
+        <div class="flex items-center gap-4">
+          <div class="text-black font-bold text-[15px] leading-5 max-w-[150px] text-right">
+            NEW IMAGE DATE<br/>11/07/2025
+          </div>
+          <img alt="Landscape view" class="w-[180px] h-[40px] rounded-lg" height="40" src="../assest/sidralogo.png" width="180"/>
+        </div>
+      </div>
+      
+      <!-- Horizontal Line -->
+      <div class="border-t border-gray-300 my-2"></div>
+      
+      <div class="flex justify-between items-center max-w-6xl mx-auto mt-8">
+        <!-- Main Content with boxes -->
+        <div class="flex items-center justify-between w-full">
+          <!-- Left Box -->
+          <div class="flex flex-col items-center border-r border-gray-300 pr-4 w-1/3">
+            <div class="bg-[#edf3f8] text-gray-700 font-bold text-[14px] rounded-md px-4 py-2 mb-3 inline-block">
+              -0.09
+            </div>
+            <img alt="Old NDMI" class="w-[220px] h-[220px] object-cover" height="220" src="../images/TN-24-UT001(N)/old_ndmi.png" width="220"/>
+          </div>
+          
+          <!-- Middle Arrow -->
+          <div class="flex items-center justify-center px-4">
+            <div class="text-green-600 font-bold flex">
+              <!-- Green chevron arrows pointing right -->
+              <div class="flex flex-col">
+                <span class="text-[#2e8c42] text-3xl">›››</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right Box -->
+          <div class="flex flex-col items-center border-r border-gray-300 pr-4 w-1/3">
+            <div class="bg-[#edf3f8] text-gray-700 font-bold text-[14px] rounded-md px-4 py-2 mb-3 inline-block">
+              -0.09
+            </div>
+            <img alt="Current NDMI" class="w-[220px] h-[220px] object-cover" height="220" src="../images/TN-24-UT001(N)/current_ndmi.png" width="220"/>
+          </div>
+          
+          <!-- Far Right Image -->
+          <div class="flex flex-col items-center ml-4 w-1/4">
+            <img alt="Field visualization tall" class="w-[160px] h-[280px] object-cover" height="280" src="../assest/farmland.png" width="160"/>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Horizontal Line -->
+      <div class="border-t border-gray-300 my-6"></div>
+      
+      <!-- Footer Info -->
+      <div class="max-w-5xl mx-auto mt-4 text-[16px] font-sans">
+        <div class="text-gray-700">
+          <p class="font-semibold">
+            Moisture Level Indicator (NDMI)
+          </p>
+          <p class="mt-2 font-bold">
+            2025-07-11 தேதியின்படி, உங்கள் நிலத்தில் உள்ள ஈரப்பதம் குறைவாக உள்ளது (-0.09 NDMI). இது முன்னரை விட குறைந்துள்ளது (-0.15 மாற்றம்). பயிர் மற்றும் நிலை குறிப்பிடப்படாததால், போதுமான ஈரப்பதம் இல்லை. நீர்ப்பாசனம் செய்வது அவசியமாகலாம்.
+          </p>
+        </div>
+      </div>
+    </div>
+        </div>
+        <div class="page-break"></div>
+
+        <div class="page" id="page4">
+            <!-- PAGE 2 -->
+    <div class="max-w-7xl mx-auto p-6 bg-[#dbe8f2] rounded-3xl relative min-h-[600px] mt-12">
+      <div class="flex items-center justify-between mb-4">
+        <div class="text-black font-bold text-[15px] leading-5 max-w-[150px]">
+          OLD IMAGE DATE:<br/>11/07/2025
+        </div>
+        <h1 class="text-black font-bold text-2xl leading-6 tracking-tight">
+          LEAF FRESHNESS INDEX (RECI)
+        </h1>
+        <div class="flex items-center gap-4">
+          <div class="text-black font-bold text-[15px] leading-5 max-w-[150px] text-right">
+            NEW IMAGE DATE<br/>11/07/2025
+          </div>
+          <img alt="Landscape view" class="w-[180px] h-[40px] rounded-lg" height="40" src="../assest/sidralogo.png" width="180"/>
+        </div>
+      </div>
+      
+      <!-- Horizontal Line -->
+      <div class="border-t border-gray-300 my-2"></div>
+      
+      <div class="flex justify-between items-center max-w-6xl mx-auto mt-8">
+        <!-- Main Content with boxes -->
+        <div class="flex items-center justify-between w-full">
+          <!-- Left Box -->
+          <div class="flex flex-col items-center border-r border-gray-300 pr-4 w-1/3">
+            <div class="bg-[#edf3f8] text-gray-700 font-bold text-[14px] rounded-md px-4 py-2 mb-3 inline-block">
+              1.02
+            </div>
+            <img alt="Old RECI" class="w-[220px] h-[220px] object-cover" height="220" src="../images/TN-24-UT001(N)/old_reci.png" width="220"/>
+          </div>
+          
+          <!-- Middle Arrow -->
+          <div class="flex items-center justify-center px-4">
+            <div class="text-green-600 font-bold flex">
+              <!-- Green chevron arrows pointing right -->
+              <div class="flex flex-col">
+                <span class="text-[#2e8c42] text-3xl">›››</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right Box -->
+          <div class="flex flex-col items-center border-r border-gray-300 pr-4 w-1/3">
+            <div class="bg-[#edf3f8] text-gray-700 font-bold text-[14px] rounded-md px-4 py-2 mb-3 inline-block">
+              1.02
+            </div>
+            <img alt="Current RECI" class="w-[220px] h-[220px] object-cover" height="220" src="../images/TN-24-UT001(N)/current_reci.png" width="220"/>
+          </div>
+          
+          <!-- Far Right Image -->
+          <div class="flex flex-col items-center ml-4 w-1/4">
+            <img alt="Field visualization tall" class="w-[160px] h-[280px] object-cover" height="280" src="../assest/farmland.png" width="160"/>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Horizontal Line -->
+      <div class="border-t border-gray-300 my-6"></div>
+      
+      <!-- Footer Info -->
+      <div class="max-w-5xl mx-auto mt-4 text-[16px] font-sans">
+        <div class="text-gray-700">
+          <p class="font-semibold">
+             Leaf Freshness Index (RECI)
+          </p>
+          <p class="mt-2 font-bold">
+            2025-07-11 அன்று எடுக்கப்பட்ட படங்களின்படி, உங்கள் நிலத்தில் இலைகளின் பச்சைத்தன்மை (RECI: 1.02, மாற்றம்: -1.66) குறைவாக உள்ளது. இது சத்துக்கள் குறைபாட்டை குறிக்கிறது. பயிருக்கு பொதுவான உரம் இடுவது நல்லது.
+          </p>
+        </div>
+      </div>
+    </div>
+        </div>
+        <div class="page-break"></div>
+
+        <div class="page" id="page5">
+            <!-- PAGE 2 -->
+    <div class="max-w-7xl mx-auto p-6 bg-[#dbe8f2] rounded-3xl relative min-h-[600px] mt-12">
+      <div class="flex items-center justify-between mb-4">
+        <div class="text-black font-bold text-[15px] leading-5 max-w-[150px]">
+          OLD IMAGE DATE:<br/>11/07/2025
+        </div>
+        <h1 class="text-black font-bold text-2xl leading-6 tracking-tight">
+          GROWTH STRENGTH INDEX (MSAVI)
+        </h1>
+        <div class="flex items-center gap-4">
+          <div class="text-black font-bold text-[15px] leading-5 max-w-[150px] text-right">
+            NEW IMAGE DATE<br/>11/07/2025
+          </div>
+          <img alt="Landscape view" class="w-[180px] h-[40px] rounded-lg" height="40" src="../assest/sidralogo.png" width="180"/>
+        </div>
+      </div>
+      
+      <!-- Horizontal Line -->
+      <div class="border-t border-gray-300 my-2"></div>
+      
+      <div class="flex justify-between items-center max-w-6xl mx-auto mt-8">
+        <!-- Main Content with boxes -->
+        <div class="flex items-center justify-between w-full">
+          <!-- Left Box -->
+          <div class="flex flex-col items-center border-r border-gray-300 pr-4 w-1/3">
+            <div class="bg-[#edf3f8] text-gray-700 font-bold text-[14px] rounded-md px-4 py-2 mb-3 inline-block">
+              0.23
+            </div>
+            <img alt="Old MSAVI" class="w-[220px] h-[220px] object-cover" height="220" src="../images/TN-24-UT001(N)/old_msavi.png" width="220"/>
+          </div>
+          
+          <!-- Middle Arrow -->
+          <div class="flex items-center justify-center px-4">
+            <div class="text-green-600 font-bold flex">
+              <!-- Green chevron arrows pointing right -->
+              <div class="flex flex-col">
+                <span class="text-[#2e8c42] text-3xl">›››</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right Box -->
+          <div class="flex flex-col items-center border-r border-gray-300 pr-4 w-1/3">
+            <div class="bg-[#edf3f8] text-gray-700 font-bold text-[14px] rounded-md px-4 py-2 mb-3 inline-block">
+              0.23
+            </div>
+            <img alt="Current MSAVI" class="w-[220px] h-[220px] object-cover" height="220" src="../images/TN-24-UT001(N)/current_msavi.png" width="220"/>
+          </div>
+          
+          <!-- Far Right Image -->
+          <div class="flex flex-col items-center ml-4 w-1/4">
+            <img alt="Field visualization tall" class="w-[160px] h-[280px] object-cover" height="280" src="../assest/farmland.png" width="160"/>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Horizontal Line -->
+      <div class="border-t border-gray-300 my-6"></div>
+      
+      <!-- Footer Info -->
+      <div class="max-w-5xl mx-auto mt-4 text-[16px] font-sans">
+        <div class="text-gray-700">
+          <p class="font-semibold">
+               Growth Strength Index (MSAVI)
+          </p>
+          <p class="mt-2 font-bold">
+            MSAVI மதிப்பு 0.23 ஆக உள்ளது, இது நிலம் பயிரிடப்படாததைக் காட்டுகிறது. MSAVI மாற்றம் -0.13 ஆகக் குறைந்துள்ளது, இது மண்ணின் ஈரப்பதம் அல்லது வளர்ச்சியில் மேலும் குறைவைக் குறிக்கிறது. நிலத்தைச் சமன் செய்து, அடுத்த பயிரிடலுக்குத் தயார் செய்யவும்.
+          </p>
+        </div>
+      </div>
+    </div>
+        </div>
+        <div class="page-break"></div>
+
+        <div class="page" id="page6">
+            <!-- PAGE 2 -->
+    <div class="max-w-7xl mx-auto p-6 bg-[#dbe8f2] rounded-3xl relative min-h-[600px] mt-12">
+      <div class="flex items-center justify-between mb-4">
+        <div class="text-black font-bold text-[15px] leading-5 max-w-[150px]">
+          OLD IMAGE DATE:<br/>11/07/2025
+        </div>
+        <h1 class="text-black font-bold text-2xl leading-6 tracking-tight">
+          EARLY STRESS CHECKER (NDRE)
+        </h1>
+        <div class="flex items-center gap-4">
+          <div class="text-black font-bold text-[15px] leading-5 max-w-[150px] text-right">
+            NEW IMAGE DATE<br/>11/07/2025
+          </div>
+          <img alt="Landscape view" class="w-[180px] h-[40px] rounded-lg" height="40" src="../assest/sidralogo.png" width="180"/>
+        </div>
+      </div>
+      
+      <!-- Horizontal Line -->
+      <div class="border-t border-gray-300 my-2"></div>
+      
+      <div class="flex justify-between items-center max-w-6xl mx-auto mt-8">
+        <!-- Main Content with boxes -->
+        <div class="flex items-center justify-between w-full">
+          <!-- Left Box -->
+          <div class="flex flex-col items-center border-r border-gray-300 pr-4 w-1/3">
+            <div class="bg-[#edf3f8] text-gray-700 font-bold text-[14px] rounded-md px-4 py-2 mb-3 inline-block">
+              0.18
+            </div>
+            <img alt="Old NDRE" class="w-[220px] h-[220px] object-cover" height="220" src="../images/TN-24-UT001(N)/old_ndre.png" width="220"/>
+          </div>
+          
+          <!-- Middle Arrow -->
+          <div class="flex items-center justify-center px-4">
+            <div class="text-green-600 font-bold flex">
+              <!-- Green chevron arrows pointing right -->
+              <div class="flex flex-col">
+                <span class="text-[#2e8c42] text-3xl">›››</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right Box -->
+          <div class="flex flex-col items-center border-r border-gray-300 pr-4 w-1/3">
+            <div class="bg-[#edf3f8] text-gray-700 font-bold text-[14px] rounded-md px-4 py-2 mb-3 inline-block">
+              0.18
+            </div>
+            <img alt="Current NDRE" class="w-[220px] h-[220px] object-cover" height="220" src="../images/TN-24-UT001(N)/current_ndre.png" width="220"/>
+          </div>
+          
+          <!-- Far Right Image -->
+          <div class="flex flex-col items-center ml-4 w-1/4">
+            <img alt="Field visualization tall" class="w-[160px] h-[280px] object-cover" height="280" src="../assest/farmland.png" width="160"/>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Horizontal Line -->
+      <div class="border-t border-gray-300 my-6"></div>
+      
+      <!-- Footer Info -->
+      <div class="max-w-5xl mx-auto mt-4 text-[16px] font-sans">
+        <div class="text-gray-700">
+          <p class="font-semibold">
+               Early Stress Checker (NDRE)
+          </p>
+          <p class="mt-2 font-bold">
+            உங்கள் நிலத்தின் சத்துக்கள் உறிஞ்சுதல் (NDRE) 0.18 ஆக உள்ளது, மேலும் இது 0.15 குறைந்துள்ளது. இது சத்துக்கள் பற்றாக்குறையை குறிக்கிறது. உரமிடும் நேரத்தை சரிபார்க்கவும் அல்லது நுண்ணூட்டச்சத்து தெளிப்புகளைப் பயன்படுத்தவும்.
+          </p>
+        </div>
+      </div>
+    </div>
+        </div>
+        <div class="page-break"></div>
+
+    </div>
+
+    <script>
+        document.getElementById('downloadPdf').addEventListener('click', function() {
+            console.log('PDF download button clicked');
+            
+            // Hide the download button during PDF generation
+            this.style.display = 'none';
+            
+            const element = document.getElementById('reportContent');
+            console.log('Report element found:', element);
+            
+            if (!element) {
+                alert('Report content not found!');
+                this.style.display = 'flex';
+                return;
+            }
+            
+            // Wait for any dynamic content to load
+            setTimeout(() => {
+                console.log('Starting PDF generation...');
+                
+                // Optimized options for better PDF quality and reliability
+                const opt = {
+                    margin: 10,
+                    filename: 'sidra_crop_report.pdf',
+                    image: { 
+                        type: 'jpeg', 
+                        quality: 0.98
+                    },
+                    html2canvas: { 
+                        scale: 2,
+                        useCORS: true,
+                        allowTaint: true,
+                        letterRendering: true,
+                        backgroundColor: '#dbe8f2'
+                    },
+                    jsPDF: { 
+                        unit: 'mm', 
+                        format: 'a4', 
+                        orientation: 'portrait'
+                    },
+                    pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+                };
+                
+                // Generate PDF
+                html2pdf()
+                    .from(element)
+                    .set(opt)
+                    .save()
+                    .then(() => {
+                        console.log('PDF generation successful');
+                        document.getElementById('downloadPdf').style.display = 'flex';
+                    })
+                    .catch((error) => {
+                        console.error('PDF generation failed:', error);
+                        document.getElementById('downloadPdf').style.display = 'flex';
+                        alert('PDF generation failed: ' + error.message);
+                    });
+            }, 500);
+        });
+    </script>
+</body>
+</html>
