@@ -164,26 +164,31 @@ def generate_page6(excel_file, template_file, output_file, current_image=None, o
     html_content = html_content.replace('IMAGE DATE2', new_image_date)
     
     # Update the image sources in the HTML
-    # Make sure to use the correct paths for both old and current NDRE images
-    old_image_path = 'images/old_ndre.png'  # Use a fixed path to ensure it's always available
-    current_image_path = 'images/current_ndre.png'
+    # If specific images were provided, use those paths
+    if old_image and current_image:
+        old_image_path = old_image
+        current_image_path = current_image
+    else:
+        # Otherwise use default paths
+        old_image_path = 'images/old_ndre.png'
+        current_image_path = 'images/current_ndre.png'
     
     # First box should have the old NDRE image
     html_content = html_content.replace(
-        '<img alt="image 2 " class="w-[220px] h-[220px] object-cover" height="220" src=" " width="220"/>',
+        '<img alt="Old NDRE" class="w-[220px] h-[220px] object-cover" height="220" src=" " width="220"/>',
         f'<img alt="Old NDRE" class="w-[220px] h-[220px] object-cover" height="220" src="{old_image_path}" width="220"/>'
     )
     
     # Second box should have the current NDRE image
     html_content = html_content.replace(
-        '<img alt="image 3" class="w-[220px] h-[220px] object-cover" height="220" src="  " width="220"/>',
+        '<img alt="Current NDRE" class="w-[220px] h-[220px] object-cover" height="220" src=" " width="220"/>',
         f'<img alt="Current NDRE" class="w-[220px] h-[220px] object-cover" height="220" src="{current_image_path}" width="220"/>'
     )
     
-    # Fix farmland.png path (remove leading slash)
+    # Fix farmland.png path (ensure it uses the correct relative path)
     html_content = html_content.replace(
         'src="/assest/farmland.png"',
-        'src="assest/farmland.png"'
+        'src="../assest/farmland.png"'
     )
     
     # Update NDRE values and advisory

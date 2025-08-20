@@ -138,20 +138,20 @@ def generate_page2(excel_file, template_file, output_file, current_image=None, o
     # Update the image sources in the HTML
     if old_image_path:  # First box should have the old NDVI image
         html_content = html_content.replace(
-            '<img alt="image 2 " class="w-[220px] h-[220px] object-cover" height="220" src=" " width="220"/>',
+            '<img alt="Old NDVI" class="w-[220px] h-[220px] object-cover" height="220" src=" " width="220"/>',
             f'<img alt="Old NDVI" class="w-[220px] h-[220px] object-cover" height="220" src="{old_image_path}" width="220"/>'
         )
     
     if current_image_path:  # Second box should have the current NDVI image
         html_content = html_content.replace(
-            '<img alt="image 3" class="w-[220px] h-[220px] object-cover" height="220" src="  " width="220"/>',
+            '<img alt="Current NDVI" class="w-[220px] h-[220px] object-cover" height="220" src=" " width="220"/>',
             f'<img alt="Current NDVI" class="w-[220px] h-[220px] object-cover" height="220" src="{current_image_path}" width="220"/>'
         )
     
-    # Fix farmland.png path (remove leading slash)
+    # Fix farmland.png path
     html_content = html_content.replace(
         'src="/assest/farmland.png"',
-        'src="assest/farmland.png"'
+        'src="../assest/farmland.png"'
     )
     
     # Update NDVI values and advisory

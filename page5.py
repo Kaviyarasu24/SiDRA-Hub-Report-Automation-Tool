@@ -164,26 +164,31 @@ def generate_page5(excel_file, template_file, output_file, current_image=None, o
     html_content = html_content.replace('IMAGE DATE2', new_image_date)
     
     # Update the image sources in the HTML
-    # Make sure to use the correct paths for both old and current MSAVI images
-    old_image_path = 'images/old_msavi.png'  # Use a fixed path to ensure it's always available
-    current_image_path = 'images/current_msavi.png'
+    # If specific images were provided, use those paths
+    if old_image and current_image:
+        old_image_path = old_image
+        current_image_path = current_image
+    else:
+        # Otherwise use default paths
+        old_image_path = 'images/old_msavi.png'
+        current_image_path = 'images/current_msavi.png'
     
     # First box should have the old MSAVI image
     html_content = html_content.replace(
-        '<img alt="image 2 " class="w-[220px] h-[220px] object-cover" height="220" src=" " width="220"/>',
+        '<img alt="Old MSAVI" class="w-[220px] h-[220px] object-cover" height="220" src=" " width="220"/>',
         f'<img alt="Old MSAVI" class="w-[220px] h-[220px] object-cover" height="220" src="{old_image_path}" width="220"/>'
     )
     
     # Second box should have the current MSAVI image
     html_content = html_content.replace(
-        '<img alt="image 3" class="w-[220px] h-[220px] object-cover" height="220" src="  " width="220"/>',
+        '<img alt="Current MSAVI" class="w-[220px] h-[220px] object-cover" height="220" src=" " width="220"/>',
         f'<img alt="Current MSAVI" class="w-[220px] h-[220px] object-cover" height="220" src="{current_image_path}" width="220"/>'
     )
     
-    # Fix farmland.png path (remove leading slash)
+    # Fix farmland.png path (ensure it uses the correct relative path)
     html_content = html_content.replace(
         'src="/assest/farmland.png"',
-        'src="assest/farmland.png"'
+        'src="../assest/farmland.png"'
     )
     
     # Update MSAVI values and advisory

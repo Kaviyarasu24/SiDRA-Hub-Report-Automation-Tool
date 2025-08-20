@@ -1,84 +1,54 @@
 <html lang="en">
- <head>
+<head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
-   Crop Report
-  </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
+  <title>Crop Report</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
- </head>
- <body class="bg-white">
-  <div class="max-w-7xl mx-auto p-6 bg-[#dbe8f2] rounded-3xl relative min-h-[600px]">
-   <img alt="SiRDA_Logo" class="absolute top-6 left-6 rounded-lg w-[300px] h-[60px] object-cover" height="70" src="/assest/sidralogo.png" width="300"/>
-   <img alt="KSRCT_Logo" class="absolute top-6 right-6 rounded-lg w-[60px] h-[60px] object-cover" height="60" src="/assest/ksrctlogo.png " width="60"/>
-   <h1 class="text-[72px] font-sans font-normal text-[#1f2937] text-center mt-20">
+</head>
+<body class="bg-white">
+  <img alt="SiRDA_Logo" class="absolute top-6 left-6 w-[300px] h-[60px] object-contain" height="70" src="../assest/sidralogo.png" width="300"/>
+  <img alt="KSRCT_Logo" class="absolute top-6 right-6 w-[60px] h-[60px] object-contain" height="60" src="../assest/ksrctlogo.png " width="60"/>
+  <h1 class="text-[72px] font-sans font-normal text-[#1f2937] text-center mt-20 mb-8">
     Crop Report
-   </h1>
-   <div class="max-w-[600px] mx-auto mt-8 rounded-3xl overflow-hidden">
-    <img alt="Farmland image" class="w-full h-auto object-cover rounded-3xl" height="300" src=" field images " width="600"/>
-   </div>
-   <div class="flex justify-center items-center mt-4 text-black font-extrabold text-lg">
-    <i class="fas fa-map-marker-alt mr-2">
-    </i>
-    Field Information
-   </div>
-   <div class="max-w-4xl mx-auto mt-6 grid grid-cols-2 gap-x-20 gap-y-3 text-[18px] font-sans">
-    <div class="space-y-3">
-     <div class="text-gray-600 font-semibold flex justify-between">
-      <span>
-       Field Name:
-      </span>
-      <span class="font-extrabold">
-       Field
-      </span>
-     </div>
-     <div class="text-gray-600 font-semibold flex justify-between">
-      <span>
-       Crop Name:
-      </span>
-      <span class="font-extrabold">
-       crop
-      </span>
-     </div>
-     <div class="text-gray-600 font-semibold flex justify-between">
-      <span>
-       Sowing Date:
-      </span>
-      <span class="font-extrabold">
-       Sowing/planting
-      </span>
-     </div>
-    </div>
-    <div class="space-y-3">
-     <div class="text-gray-600 font-semibold flex justify-between">
-      <span>
-       Report Date:
-      </span>
-      <span class="font-extrabold">
-       Current date
-      </span>
-     </div>
-     <div class="text-gray-600 font-semibold flex justify-between">
-      <span>
-       Area Coverage (in Acre):
-      </span>
-      <span class="font-extrabold">
-       Area
-      </span>
-     </div>
-     <div class="text-gray-600 font-semibold flex justify-between">
-      <span>
-       Growth Stage:
-      </span>
-      <span class="font-extrabold">
-       Maturity
-      </span>
-     </div>
-    </div>
-   </div>
+  </h1>
+  <div class="max-w-[600px] mx-auto mt-8 mb-6 rounded-3xl overflow-hidden">
+    <img alt="Farmland image" class="w-full h-auto object-cover rounded-3xl" height="300" src="../assest/farmland.png" width="600"/>
   </div>
- </body>
+  <div class="flex justify-center items-center mt-4 mb-6 text-black font-extrabold text-lg">
+    <i class="fas fa-map-marker-alt mr-2"></i>
+    Field Information
+  </div>
+  <div class="max-w-4xl mx-auto mt-6 grid grid-cols-2 gap-x-20 gap-y-3 text-[18px] font-sans">
+    <div class="space-y-3">
+      <div class="text-gray-600 font-semibold">
+        <span>Field Name: </span>
+        <span class="font-extrabold">Field</span>
+      </div>
+      <div class="text-gray-600 font-semibold">
+        <span>Crop Name: </span>
+        <span class="font-extrabold">crop</span>
+      </div>
+      <div class="text-gray-600 font-semibold">
+        <span>Sowing Date: </span>
+        <span class="font-extrabold">Sowing/planting</span>
+      </div>
+    </div>
+    <div class="space-y-3">
+      <div class="text-gray-600 font-semibold">
+        <span>Report Date: </span>
+        <span class="font-extrabold">Current date</span>
+      </div>
+      <div class="text-gray-600 font-semibold">
+        <span>Area Coverage: </span>
+        <span class="font-extrabold">Area</span>
+      </div>
+      <div class="text-gray-600 font-semibold">
+        <span>Growth Stage: </span>
+        <span class="font-extrabold">Maturity</span>
+      </div>
+    </div>
+  </div>
+</body>
 </html>
 

@@ -252,14 +252,25 @@ def combine_html_pages(page_files, field_name=""):
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
-        @media print {
-            .page-break {
-                page-break-after: always;
-            }
-        }
-        .page {
-            margin-bottom: 40px;
-        }
+    @media print {
+      .page {
+        page-break-after: always;
+        width: 297mm;
+        height: 210mm;
+        overflow: hidden;
+      }
+    }
+    .page {
+      margin-bottom: 40px;
+      width: 297mm;
+      height: 210mm;
+      background: #dbe8f2;
+      box-sizing: border-box;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
     </style>
 </head>
 <body class="bg-gray-100">
@@ -318,6 +329,10 @@ def combine_html_pages(page_files, field_name=""):
                         body_content = body_content.replace('src="../../assest/', 'src="../assest/')
                         body_content = body_content.replace('src="../../images/', 'src="../images/')
                         
+                        # Ensure there are no empty image src attributes
+                        body_content = body_content.replace('src=" "', f'src="../images/{field_name}/current_ndvi.png"')
+                        body_content = body_content.replace('src="  "', f'src="../images/{field_name}/current_ndvi.png"')
+                        
                         # Direct approach to fix corrupted HTML
                         import re
                         
@@ -375,27 +390,29 @@ def combine_html_pages(page_files, field_name=""):
                 console.log('Starting PDF generation...');
                 
                 // Optimized options for better PDF quality and reliability
-                const opt = {
-                    margin: 10,
-                    filename: 'sidra_crop_report.pdf',
-                    image: { 
-                        type: 'jpeg', 
-                        quality: 0.98
-                    },
-                    html2canvas: { 
-                        scale: 2,
-                        useCORS: true,
-                        allowTaint: true,
-                        letterRendering: true,
-                        backgroundColor: '#dbe8f2'
-                    },
-                    jsPDF: { 
-                        unit: 'mm', 
-                        format: 'a4', 
-                        orientation: 'portrait'
-                    },
-                    pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
-                };
+        const opt = {
+          margin: 0,
+          filename: 'sidra_crop_report.pdf',
+          image: { 
+            type: 'jpeg', 
+            quality: 0.98
+          },
+          html2canvas: { 
+            scale: 2,
+            useCORS: true,
+            allowTaint: true,
+            letterRendering: true,
+            backgroundColor: '#dbe8f2',
+            width: 297 * 3.78, // px for A4 landscape
+            height: 210 * 3.78 // px for A4 landscape
+          },
+          jsPDF: { 
+            unit: 'mm', 
+            format: 'a4', 
+            orientation: 'landscape'
+          },
+          pagebreak: { mode: ['css', 'legacy'] }
+        };
                 
                 // Generate PDF
                 html2pdf()
